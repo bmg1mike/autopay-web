@@ -4,6 +4,7 @@ import {
   Button,
   Checkbox,
   Container,
+  Flex,
   FormControl,
   FormLabel,
   Heading,
@@ -13,12 +14,11 @@ import {
   InputGroup,
   InputRightElement,
   SimpleGrid,
-    Stack,
-  Text
+  Stack,
+  Text,
 } from "@chakra-ui/react";
 import { useReducer } from "react";
 import AutopayLogo from "../utilities/AutopayLogo";
-import LoginImage from "../utilities/LoginImage";
 import { h2 } from "framer-motion/client";
 import ShowPasswordReducer from "../../state-management/ShowPasswordReducer";
 import NeedHelp from "../utilities/NeedHelp";
@@ -29,21 +29,57 @@ function Login() {
     <Container maxW="100wh" color="red" p={0}>
       <SimpleGrid columns={2} maxW="100wh" minH={"100vh"}>
         <Box
+          backgroundImage="url('/images/login_image.jpeg')"
+          backgroundPosition="center"
+          backgroundRepeat="no-repeat"
+          backgroundAttachment="scroll"
+          backgroundSize="cover"
+          backgroundColor="blue.900"
+          backgroundBlendMode="multiply"
+          display={{ base: "none", sm: "block" }}
+        >
+          <Box mt={"200px"} width={"500px"} mx={"auto"} color={"white"}>
+            <Heading as={h2} mb={"1.5"}>
+              Navigate Your Business Journey
+            </Heading>
+            <Text>Streamlined Solutions for salary payments</Text>
+            <Box mx={"auto"} px={"20"}>
+              {/* <LoginImage /> */}
+            </Box>
+          </Box>
+          <Flex justify={"space-between"} ml={'20px'} mr={'20px'} color={'white'} mt="200px" >
+            <Box>
+              <Text fontWeight={'bold'}>Account monitoring</Text>
+              This is some subtitle text about account monitoring
+            </Box>
+            <Box><Text fontWeight={'bold'}>Account monitoring</Text>
+            This is some subtitle text about account monitoring</Box>
+            <Box><Text fontWeight={'bold'}>Account monitoring</Text>
+            This is some subtitle text about account monitoring</Box>
+          </Flex>
+
+          <Box textAlign={"right"} pl={100} mt={200}>
+            <NeedHelp />
+            <Box />
+          </Box>
+        </Box>
+        <Box
           py={{ base: "0", sm: "8" }}
           px={{ base: "4", sm: "10" }}
-            bg={{ base: "transparent", sm: "bg.surface" }}
+          bg={{ base: "transparent", sm: "bg.surface" }}
           boxShadow={{ base: "none", sm: "md" }}
           //   borderRadius={{ base: "none", sm: "xl" }}
           color={"gray.500"}
-          
         >
           <Stack spacing="6">
             <Stack spacing="6">
-                          <AutopayLogo />
-                          <Heading as={h2} size="lg" color={"#353F50"}>
-                              Login to Autopay
-                          </Heading>
-                          <Text color={"#5F738C"}>Provide the following credentials</Text>
+              <AutopayLogo />
+              <Heading as={h2} size="lg" color={"#353F50"}>
+                Welcome to AutoPay
+              </Heading>
+              <Text color={"#5F738C"}>
+                Provide the following credentials to Login
+              </Text>
 
               <FormControl>
                 <FormLabel htmlFor="email">Username</FormLabel>
@@ -85,7 +121,9 @@ function Login() {
               </Button>
             </HStack>
             <Stack spacing="6">
-              <Button bg={"#A8D6EF"} color={"white"}>Log in</Button>
+              <Button bg={"#A8D6EF"} color={"white"}>
+                Log in
+              </Button>
               {/* <HStack>
                 <Divider />
                 <Text textStyle="sm" whiteSpace="nowrap" color="fg.muted">
@@ -96,20 +134,6 @@ function Login() {
               {/* <OAuthButtonGroup /> */}
             </Stack>
           </Stack>
-        </Box>
-        <Box bg={"#A8D6EF"}>
-          <Box mt={"200px"} width={"500px"} mx={"auto"}>
-            <Heading as={h2} mb={"12"} color={"#072F40"}>
-              Seamless auto remitance
-            </Heading>
-            <Box mx={"auto"} px={"20"}>
-              <LoginImage />
-            </Box>
-          </Box>
-          <Box textAlign={"right"}  pl={100} mt={200}>
-            <NeedHelp />
-            <Box />
-          </Box>
         </Box>
       </SimpleGrid>
     </Container>

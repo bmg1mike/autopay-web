@@ -4,7 +4,7 @@ function NeedHelp() {
   return (
     <>
       <Flex
-        bg={"#10345E"}
+        bg={"#0275D8"}
         color={"white"}
         w={"156px"}
         h={"48px"}
