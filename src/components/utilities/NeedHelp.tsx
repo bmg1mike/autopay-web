@@ -13,7 +13,7 @@ function NeedHelp() {
         fontWeight={"bold"}
         pt={"3"}
         justify={"space-evenly"}
-        ml={"96"}
+        ml={"70%"}
       >
         <svg
           width="24"
