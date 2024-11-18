@@ -58,9 +58,8 @@ function Login() {
             This is some subtitle text about account monitoring</Box>
           </Flex>
 
-          <Box textAlign={"right"} pl={100} mt={200}>
+          <Box textAlign={"right"} pl={100} mt={"28"} mb={"10"}>
             <NeedHelp />
-            <Box />
           </Box>
         </Box>
         <Box
