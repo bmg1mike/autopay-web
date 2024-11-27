@@ -4,7 +4,6 @@ import {
   Button,
   Checkbox,
   Container,
-  Flex,
   FormControl,
   FormLabel,
   Heading,
@@ -40,25 +39,43 @@ function Login() {
         >
           <Box mt={"200px"} width={"500px"} mx={"auto"} color={"white"}>
             <Heading as={h2} mb={"1.5"}>
-              Navigate Your Business Journey
+              Seamless Payments for Your Business
             </Heading>
-            <Text>Streamlined Solutions for salary payments</Text>
+            <Text>Simple solutions for salary and vendor payments</Text>
             <Box mx={"auto"} px={"20"}>
               {/* <LoginImage /> */}
             </Box>
           </Box>
-          <Flex justify={"space-between"} ml={'20px'} mr={'20px'} color={'white'} mt="200px" >
-            <Box>
-              <Text fontWeight={'bold'}>Account monitoring</Text>
-              This is some subtitle text about account monitoring
+          <HStack
+            justify={"space-between"}
+            ml={"20px"}
+            mr={"20px"}
+            color={"white"}
+            mt="200px"
+          >
+            <Box fontSize={"xs"} borderRight={'1px'} mr='4' pr={'4'}>
+              <Text fontWeight={"bold"} mb={5}>
+                Payments Workflows That Fit Your Internal Business Processes
+              </Text>
+              Customizable maker-checker workflows that align with your approval
+              hierarchy
             </Box>
-            <Box><Text fontWeight={'bold'}>Account monitoring</Text>
-            This is some subtitle text about account monitoring</Box>
-            <Box><Text fontWeight={'bold'}>Account monitoring</Text>
-            This is some subtitle text about account monitoring</Box>
-          </Flex>
+            <Box fontSize={"xs"} borderRight={'1px'} mr='4' pr={'4'}>
+              <Text fontWeight={"bold"} mb={3}>
+                Single and Bulk Payments Across Multiple Financial Institutions
+              </Text>
+              Transfer funds to up to 5,000 beneficiaries across multiple Bank
+              accounts
+            </Box>
+            <Box fontSize={"xs"}>
+              <Text fontWeight={"bold"} mb={5}>
+                Make Payments from Multiple Bank Accounts
+              </Text>
+              Register multiple Bank accounts across Banks for funding payments
+            </Box>
+          </HStack>
 
-          <Box textAlign={"right"} pl={100} mt={200}>
+          <Box fontSize={"xs"} pl={'10%'} mt={10}>
             <NeedHelp />
             <Box />
           </Box>
@@ -72,16 +89,16 @@ function Login() {
           color={"gray.500"}
         >
           <Stack spacing="6">
-            <Stack spacing="6">
+            <Stack spacing="6" direction={"column"}>
               <AutopayLogo />
               <Heading as={h2} size="lg" color={"#353F50"}>
                 Welcome to AutoPay
               </Heading>
               <Text color={"#5F738C"}>
-                Provide the following credentials to Login
+                Please enter the below credentials to log in
               </Text>
 
-              <FormControl>
+              <FormControl width={{base : '100%'}}>
                 <FormLabel htmlFor="email">Username</FormLabel>
                 <Input id="email" type="email" />
               </FormControl>
@@ -114,7 +131,7 @@ function Login() {
                 <Input id="otp" type="text" />
               </FormControl>
             </Stack>
-            <HStack justify="space-between">
+            <HStack justify={{base : "center", md: "space-between" }}>
               <Checkbox defaultChecked>Remember me</Checkbox>
               <Button variant="link" size="sm">
                 Reset Password?
