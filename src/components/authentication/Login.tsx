@@ -77,7 +77,6 @@ function Login() {
 
           <Box fontSize={"xs"} pl={'10%'} mt={10}>
             <NeedHelp />
-            <Box />
           </Box>
         </Box>
         <Box
